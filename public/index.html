@@ -1,0 +1,34 @@
+<html lang="en" ng-app="angularSPA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/">
+    <title>Document</title>
+    <link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./libs/angular/angular.min.js"></script>
+    <script src="./libs/angular-route/angular-route.min.js"></script>
+    <script src="./js/angapp.js"></script>
+    <script src="./js/controller/AboutCtrl.js"></script>
+    <script src="./js/controller/ContactCtrl.js"></script>
+    <script src="./js/controller/HomeCtrl.js"></script>
+    <script src="./js/service/AboutService.js"></script>
+    <script src="./js/angappRoutes.js"></script>
+   
+</head>
+<body  ng-controller="HomeController">
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <a href="http://bhanukushwah.co">I Am Bhanu</a>
+            </div>
+        </nav>
+        <ul class="nav navbar-nav">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </div>
+    <div ng-view></div>
+</body>
+</html>
