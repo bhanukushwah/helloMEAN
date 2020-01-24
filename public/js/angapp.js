@@ -1,1 +1,1 @@
-angular.module('angularSPA', ['ngRoute', 'angappRoutes', 'HomeCtrl', 'AboutCtrl', 'ContactCtrl', 'AboutService'])
+angular.module('angularSPA', ['ngRoute', 'angappRoutes', 'HomeCtrl', 'AboutCtrl', 'ContactCtrl', 'AddCtrl', 'AboutService'])

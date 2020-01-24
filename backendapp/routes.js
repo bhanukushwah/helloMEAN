@@ -1,16 +1,27 @@
-var About = require('./model/about');
+var About = require('./model/contacts');
 
-    module.exports = function(expobj){
-        expobj.get('api/about', function(req, res){
-            About.find(function(err, about){
+module.exports = function (expobj) {
+    
+    expobj.post('/api/abouts', (req, res) => {
+       
+        console.log("First Name: " + req.body.first_name + "Contact Number: " + req.body.phone);
 
-                if (err)
-                    res.send(err);
-                
-                res.json(about);
-            });
+        let newContact = new About({
+            first_name: req.body.first_name,
+            phone: req.body.phone
         });
-            expobj.get('*', function(req, res){
-                res.sendfile('./public/index.html');
+
+        newContact.save(function (err, contact) {
+            if (err) {
+                res.json({
+                    msg: 'Failed to add Contact'
+                });
+            } else {
+                res.json({
+                    msg: 'Contact added Successfully'
+                });
+            }
+
         });
-    };
+    });
+};

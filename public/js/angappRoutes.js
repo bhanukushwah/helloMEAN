@@ -10,6 +10,10 @@ angular.module('angappRoutes', []).config(['$routeProvider', '$locationProvider'
             templateUrl: 'views/about.html',
             controller: 'AboutController'
         })
+        .when('/add', {
+            templateUrl: 'views/add.html',
+            controller: 'AddController'
+        })
         .when('/contact', {
             templateUrl: 'views/contact.html',
             controller: 'ContactController'
