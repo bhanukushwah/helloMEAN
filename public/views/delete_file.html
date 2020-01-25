@@ -8,9 +8,9 @@
             <th>Operation</th>
         </tr>
         <tr ng-repeat="data in receive_data_ind">
-            <td><input ng-model="data.first_name"></td>
-            <td><input ng-model="data.phone"></td>
-            <td><button ng-click="update_data(data._id)">Update</button></td>
+            <td>{{data.first_name}}</td>
+            <td>{{data.phone}}</td>
+            <td><button ng-click="delete_data(data._id)">Delete</button></td>
         </tr>
     </table>
 </div>

@@ -35,6 +35,9 @@ angular.module('angappRoutes', []).config(['$routeProvider', '$locationProvider'
             templateUrl: 'views/delete.html',
             controller: 'DeleteController'
         })
-    
+        .when('/delete/:id', {
+            templateUrl: 'views/delete_file.html',
+            controller: 'DeleteController'
+        })
     $locationProvider.html5Mode(true);
 }]);

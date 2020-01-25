@@ -69,15 +69,15 @@ module.exports = function (expobj) {
 
     //delete data of particular id
 
-    expobj.delete('/api/abouts/:id', function (req, res) {
-      
-        About.deleteOne({ _id: req.body._id}, function (err, results) {
+    expobj.delete('/api/delete/:id', function (req, res) {
+        About.deleteOne(req.params._Id).then(function (err, results){
             if(err){
-                res.json(err);
-            }
-            else{
-                res.json(results);
-            }
-        });
+                    res.json(err);
+                }
+                else{
+                    res.json(results);
+                    console.log("hey")
+                };
+        })
       });
 };

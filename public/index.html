@@ -21,20 +21,21 @@
 </head>
 <body>
     <div class="container" >
-        <nav class="navbar navbar-inverse">
-            <div class="navbar-header">
-                <a href="http://bhanukushwah.co">I Am Bhanu</a>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="navbar-brand">
+                <a href="http://bhanukushwah.co">helloMEAN</a>
             </div>
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/home">Home</a></li class="nav-link">
+               <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/add">Add</a></li>
+                <li class="nav-item"><a class="nav-link" href="/show">Show</a></li>
+                <li class="nav-item"><a class="nav-link" href="/update">Update</a></li>
+                <li class="nav-item"><a class="nav-link" href="/delete">Delete</a></li>
+            </ul>
         </nav>
-        <ul class="nav navbar-nav">
-            <li><a href="/home">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/add">Add</a></li>
-            <li><a href="/show">Show</a></li>
-            <li><a href="/update">Update</a></li>
-            <li><a href="/delete">Delete</a></li>
-        </ul>
+        
     </div>
     <div ng-view></div>
 </body>
