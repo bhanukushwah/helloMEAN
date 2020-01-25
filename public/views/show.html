@@ -1,0 +1,15 @@
+<div class="jumbotron">
+    <button type="submit" ng-click="show_data()">Show Details</button>
+
+    <table>
+        <tr>
+            <th>Full Name</th>
+            <th>Phone</th>
+        </tr>
+
+        <tr ng-repeat="data in receive_data">
+            <th>{{data.first_name}}</th>
+            <th>{{data.phone}}</th>
+        </tr>
+    </table>
+</div>

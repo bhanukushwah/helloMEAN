@@ -1,0 +1,16 @@
+<div>
+    <button type="submit" ng-click="show_data();">Show Data</button>
+
+    <table ng-init="show_data_ind()">
+        <tr>
+            <th>Full Name</th>
+            <th>Phone</th>
+            <th>Operation</th>
+        </tr>
+        <tr ng-repeat="data in receive_data_ind">
+            <td><input ng-model="data.first_name"></td>
+            <td><input ng-model="data.phone"></td>
+            <td><button ng-click="update_data(data._id)">Update</button></td>
+        </tr>
+    </table>
+</div>
