@@ -30,7 +30,11 @@ angular.module('angappRoutes', []).config(['$routeProvider', '$locationProvider'
         .when('/update/:id', {
             templateUrl: 'views/edit_update.html',
             controller: 'UpdateController'
-        });
+        })
+        .when('/delete', {
+            templateUrl: 'views/delete.html',
+            controller: 'DeleteController'
+        })
     
     $locationProvider.html5Mode(true);
 }]);

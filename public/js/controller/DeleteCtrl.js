@@ -12,12 +12,4 @@ angular.module('DeleteCtrl', []).controller('DeleteController', function($scope,
             $scope.receive_data_ind = res.data;
         });
     };
-
-    $scope.delete_data = function(id){
-        $scope.data = $scope.receive_data_ind[0];
-
-        $http.put('/api/abouts/'+id, JSON.stringify($scope.data)).then(function(res){
-            console.log(res);
-        });
-    };
 })
